@@ -1,0 +1,178 @@
+/* Container for all works */
+.our-works {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1200px; /* Set max width for better control */
+    margin-bottom: 60px; /* Space between items */
+}
+
+/* Title styling */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #003366; /* Deep ocean blue */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fixed Vertical Timeline */
+.timeline {
+    position: fixed;
+    top: 25%; /* Start from 25% of the screen height */
+    right: 20px;
+    height: 50%; /* Only half the screen height */
+    width: 8px; /* Slightly thicker line */
+    background-color: #0077b3; /* Ocean blue for the timeline */
+    border-radius: 5px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    opacity: 1; /* Fully visible */
+    transition: opacity 1.8s ease; /* Smooth fade in/out */
+    pointer-events: auto; /* Ensure it's interactive */
+}
+
+/* Hidden state for fade-out */
+.timeline.hidden {
+    opacity: 0; /* Fading effect */
+    transition: opacity 1s ease;
+    pointer-events: none; /* Prevent interactions */
+}
+
+/* Dots on the timeline */
+.timeline .dot {
+    width: 16px; /* Bigger dot size */
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff; /* White dots */
+    border: 3px solid #0077b3; /* Border color matches the timeline */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Needed for tooltip */
+}
+/* Tooltip for year display */
+.timeline .dot::after {
+    content: attr(data-year);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #0077b3;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for dots */
+.timeline .dot:hover {
+    background-color: #0077b3;
+    transform: scale(1.2);
+}
+
+.timeline .dot:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Work item box styling */
+.work-item {
+    display: flex;
+    gap: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    align-items: center;
+    background: linear-gradient(145deg, #00aaff, #0088cc); /* Ocean-like gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative; /* Needed for positioning */
+}
+
+/* Image styling */
+.work-item img {
+    width: 250px;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Title and date container */
+.work-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Work title styling */
+.work-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Year styling */
+.work-info {
+    font-size: 16px;
+    color: #b2e1f0;
+    margin-bottom: 5px;
+}
+
+/* Hover effect for work item */
+.work-item:hover {
+    background: linear-gradient(145deg, #0077b3, #00c2ff);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .work-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-item img {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .work-title, .work-info {
+        margin-bottom: 5px;
+    }
+
+    .timeline {
+        right: 10px;
+        width: 5px; /* Slightly thinner line for smaller screens */
+    }
+
+    .timeline .dot {
+        width: 12px;
+        height: 12px;
+        border: 2px solid #0077b3;
+    }
+}

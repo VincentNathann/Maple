@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+  <link href="styles.css" rel="stylesheet">
+  <link href="./main.550dcf66.css" rel="stylesheet">
+  <title>Works</title>
+</head>
+
+<body> <!-- Add your content of header -->
+  <header>
+    <nav class="navbar navbar-default active">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html" title="">
+            <img src="./assets/images/Tak berjudul765_20241110182821.png" class="navbar-logo-img" alt="">
+            Maple Studio
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./index.html" title="">Home</a></li>
+            <li><a href="./works.html" title="">Our Works</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="our-works">
+    <div class="timeline">
+      <!-- Timeline Dots -->
+      <div class="dot" data-year="2016" onclick="scrollToWork('2016')"></div>
+      <div class="dot" data-year="2017" onclick="scrollToWork('2017')"></div>
+      <div class="dot" data-year="2018" onclick="scrollToWork('2018')"></div>
+      <div class="dot" data-year="2019" onclick="scrollToWork('2019')"></div>
+      <div class="dot" data-year="2020" onclick="scrollToWork('2020')"></div>
+      <div class="dot" data-year="2021" onclick="scrollToWork('2021')"></div>
+    </div>
+
+    <!-- Work Items -->
+    <div id="2016" class="work-item">
+      <img src="assets/images/gamer-maid.jpeg" alt="GAMER MAID">
+      <div class="work-details">
+        <h3 class="work-title">Gamer Maid</h3>
+        <div class="work-info">2016 / TV animation</div>
+      </div>
+    </div>
+
+    <div id="2017" class="work-item">
+      <img src="assets/images/kobo ajh.jpeg" alt="KOBO AJH">
+      <div class="work-details">
+        <h3 class="work-title">Kobo Ajh</h3>
+        <div class="work-info">2017 / Movie</div>
+      </div>
+    </div>
+
+    <div id="2018" class="work-item">
+      <img src="assets/images/nahihi.jpeg" alt="NAHIHI!">
+      <div class="work-details">
+        <h3 class="work-title">Nahihi!</h3>
+        <div class="work-info">2018 / TV animation</div>
+      </div>
+    </div>
+
+    <div id="2019" class="work-item">
+      <img src="assets/images/tenggang rasa.jpeg" alt="TENGGANG RASA">
+      <div class="work-details">
+        <h3 class="work-title">Tenggang Rasa</h3>
+        <div class="work-info">2019 / Special Feature</div>
+      </div>
+    </div>
+
+    <div id="2020" class="work-item">
+      <img src="assets/images/oren.png" alt="ORANGE">
+      <div class="work-details">
+        <h3 class="work-title">Orange</h3>
+        <div class="work-info">2020 / OVA</div>
+      </div>
+    </div>
+
+    <div id="2021" class="work-item">
+      <img src="assets/images/imgwaw.png" alt="I Boost My Luck When Playing Koto">
+      <div class="work-details">
+        <h3 class="work-title">I Boost My Luck When Playing Koto</h3>
+        <div class="work-info">2021 / TV Animation</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-container white-text-container">
+    <div class="container">
+      <div class="row">
+
+
+        <div class="col-xs-12">
+          <h3>Maple</h3>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-7">
+              <p><small>Website created by <a href= "https://vincentnathann.github.io/vincent/"
+                    target="_blank">Vincent Nathan</a>
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <p class="text-right">
+                  <a href="https://www.instagram.com/labu_manisz/profilecard/?igsh=Mndvc2xxaDV6ZGZq" target="_blank" class="social-round-icon white-round-icon fa-icon" title="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://x.com/Labumanizzz?t=duqgjyYl6p7xGGXUbvOi5w&s=09" target="_blank" class="social-round-icon white-round-icon fa-icon" title="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToWork(year) {
+    const workElement = document.getElementById(year);
+    if (workElement) {
+        workElement.scrollIntoView({
+            behavior: 'smooth', 
+            block: 'start'
+        });
+    }
+}
+document.addEventListener('scroll', () => {
+    const footer = document.querySelector('footer'); // Select the footer
+    const timeline = document.querySelector('.timeline'); // Select the timeline
+
+    // Get the position of the footer relative to the viewport
+    const footerRect = footer.getBoundingClientRect();
+
+    // Adjust visibility logic: Fade out when footer is in view (100px below the viewport)
+    const hideTrigger = footerRect.top < window.innerHeight - 100;
+
+    // Toggle the hidden class based on scroll position
+    if (hideTrigger) {
+        timeline.classList.add('hidden'); // Trigger fade-out
+    } else {
+        timeline.classList.remove('hidden'); // Trigger fade-in
+    }
+});
+</script>
+
+  <script type="text/javascript" src="./main.0cf8b554.js"></script>
+</body>
+
+</html>
